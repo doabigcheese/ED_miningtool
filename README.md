@@ -16,3 +16,8 @@ pip install requests
 setup your windows folder where the logfiles of elite are
 adjust the threshold to your favour
 it is looking for Painite, if anything else, you need to adjust this as well
+
+
+-------------------------
+
+discovery_scanner: if you are outside of known star systems you could launch this and it will alert if you have found a completly undiscovered star system
