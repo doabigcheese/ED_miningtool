@@ -37,6 +37,7 @@ def watch(fn, words):
 words = ['AutoScan']
 speaker = win32com.client.Dispatch("SAPI.SpVoice")
 #{ "timestamp":"2021-01-04T11:23:17Z", "event":"Scan", "ScanType":"AutoScan", "BodyName":"HR 8037", "BodyID":0, "StarSystem":"HR 8037", "SystemAddress":1659728021875, "DistanceFromArrivalLS":0.000000, "StarType":"F", "Subclass":1, "StellarMass":1.519531, "Radius":902655680.000000, "AbsoluteMagnitude":3.402924, "Age_MY":1520, "SurfaceTemperature":7464.000000, "Luminosity":"V", "RotationPeriod":128717.123639, "AxialTilt":0.000000, "WasDiscovered":true, "WasMapped":false }
+#{ "timestamp":"2020-12-16T20:36:03Z", "event":"Scan", "ScanType":"AutoScan", "BodyName":"Boelts RO-Z d343", "BodyID":0, "StarSystem":"Boelts RO-Z d343", "SystemAddress":11794273652619, "DistanceFromArrivalLS":0.000000, "StarType":"A", "Subclass":9, "StellarMass":1.496094, "Radius":945424064.000000, "AbsoluteMagnitude":2.994904, "Age_MY":1246, "SurfaceTemperature":7561.000000, "Luminosity":"Vb", "RotationPeriod":171168.183361, "AxialTilt":0.000000, "WasDiscovered":false, "WasMapped":false }
 
 for hit_word, hit_sentence in watch(fn, words):
     try:
@@ -50,9 +51,9 @@ for hit_word, hit_sentence in watch(fn, words):
         print(result1)
         print(result2)
         if (result1 == 'false'):
-            speaker.Speak("System unentdeckt")
-        if (result2 == 'false'):
-            speaker.Speak("System nicht gemapped")           
+            speaker.Speak("unentdeckt")
+        #if (result2 == 'false'):
+        #    speaker.Speak("unerforscht")           
     except:
         print(".")
         #playsound(os.getcwd() + '\\zonk.mp3')
